@@ -1,5 +1,6 @@
 # Speech-to-Text featured Media Manager
-
+Media Manager is a modern media manager and player which supports
+text keyword searching inside the video/audio files. 
 ## Installation
 
 In order to run the application in local environment follow instructions below:
@@ -8,10 +9,12 @@ In order to run the application in local environment follow instructions below:
    [Media Manager - Speech-To-Text generated Media Manager](https://github.com/AkshinK/media-manager.git)
 2. Clone the repository to the working directory using
    `git clone <https-URL>` command.
-3. Navigate to the cloned repository, and install all dependencies for the application
+3. Navigate to the cloned repository, and install all dependencies for the backend 
+   application using the `pip install -r requirements.txt` command.
+4. Install all dependencies for the frontend 
    application using the `npm install` command.
-4. Run `npm start` and `python manage.py runserver` to start frontend and backend concurrently
-5. If there have not occurred prior errors until this step, you'll be able to access the website
+5. Run `npm start` and `python manage.py runserver` to start frontend and backend concurrently
+6. If there have not occurred prior errors until this step, you'll be able to access the website
    via http://localhost:3000/
 
 ## Future improvements
