@@ -26,18 +26,18 @@ In order to run the application in local environment follow instructions below:
 ## References
 
 - React JS Documentation,
-  URL: https://reactjs.org/docs/getting-started, Last accessed on 20/11/2020.
+  URL: https://reactjs.org/docs/getting-started, Last accessed on 12/05/2021.
 - Django Documentation,
-  URL: https://docs.djangoproject.com/en/3.2/, Last accessed on 27/10/2020.
+  URL: https://docs.djangoproject.com/en/3.2/, Last accessed on 12/05/2021.
 - Django Rest Framework Documentation,
-  URL: https://www.django-rest-framework.org/, Last accessed on 13/10/2020.
+  URL: https://www.django-rest-framework.org/, Last accessed on 12/05/2021.
 - PostGreSQL Documentation,
-  URL: https://www.postgresql.org/docs/, Last accessed on 01/11/2020.
+  URL: https://www.postgresql.org/docs/, Last accessed on 12/05/2021.
 - IBM Watson Documentation,
-  URL: https://cloud.ibm.com/developer/watson/documentation, Last accessed on 01/11/2020.
+  URL: https://cloud.ibm.com/developer/watson/documentation, Last accessed on 12/05/2021.
 - Watson Speech-To-Text Documentation,
-  URL: https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-gettingStarted#gettingStarted, Last accessed on 05/11/2020.
+  URL: https://cloud.ibm.com/docs/speech-to-text?topic=speech-to-text-gettingStarted#gettingStarted, Last accessed on 12/05/2021.
 - React-Redux Documentation,
-  URL: https://react-redux.js.org/api/hooks, Last accessed on 05/11/2020.
+  URL: https://react-redux.js.org/api/hooks, Last accessed on 12/05/2021.
 - Jest Documentation,
-  URL: https://jestjs.io/docs/en/getting-started, Last accessed on 05/12/2020.
+  URL: https://jestjs.io/docs/en/getting-started, Last accessed on 15/05/2021.
