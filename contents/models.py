@@ -11,7 +11,9 @@ class Content(models.Model):
         User, related_name="contents", on_delete=models.CASCADE, null=True
     )
     created_at = models.DateTimeField(auto_now_add=True)
-
+    
+    def __str__(self):
+        return f"{self.name} ({self.email}, {self.message}) - {self.owner}"
 
 class Media(models.Model):
     AVAILABLE_TYPES = [
@@ -39,13 +41,4 @@ class UserData(models.Model):
     about = models.TextField()
     profile_pic = models.ImageField(
         upload_to="pic/", default="pic/default.jpg")
-    subscribers = models.ManyToManyField(User, related_name="subscribers")
 
-
-class YoutubeData(models.Model):
-    url = models.URLField
-    text = models.FileField(upload_to="videos/youtube/", null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f"{self.url} ({self.created_at})"

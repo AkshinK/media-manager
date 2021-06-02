@@ -142,6 +142,6 @@ export const tokenConfigMedia = (getState) => {
     config.headers["Authorization"] = `Token ${token}`;
     return config;
   } else {
-    console.log("QAQA SIKDIRMISEN EEE");
+    console.log("ERROR");
   }
 };

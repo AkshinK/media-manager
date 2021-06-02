@@ -1,7 +1,7 @@
 from django.conf import settings
 from contents.models import Content
 from rest_framework import viewsets, permissions, status
-from .serializers import ContentSerializer, MediaSerializer, YoutubeDataSerializer
+from .serializers import ContentSerializer, MediaSerializer
 from .models import Media
 from rest_framework.decorators import action
 from rest_framework.response import Response
@@ -109,45 +109,6 @@ class MediaViewSet(viewsets.ModelViewSet):
         full_text_file.writelines(full_text)
         media.text.save("data", File(f))
         media.full_text.save("full.txt", File(full_text_file))
-        serializer = MediaSerializer(media, context={"request": request})
-
-        return Response(serializer.data, status=status.HTTP_200_OK)
-
-
-class YoutubeViewSet(viewsets.ModelViewSet):
-    serializer_class = YoutubeDataSerializer
-
-    def get_queryset(self):
-        return self.request.user.media.all()
-
-    @action(detail=True, methods=["get"], url_path="get_transcript")
-    def get_transcript(self, request, pk):
-        queryset = Media.objects.all()
-        media = get_object_or_404(queryset, pk=pk)
-        stt = SpeechToText()
-        if media.type == "video":
-            audio_file = os.path.join(settings.MEDIA_ROOT, "audio.wav")
-            print(audio_file)
-            Audio(media.video.path, str(audio_file))
-        else:
-            audio_file = media.video.path
-        with open(audio_file, "rb") as f:
-            res = stt.recognize(
-                audio=f,
-                content_type="audio/wav",
-                model="en-AU_NarrowbandModel",
-                continuous=True,
-                timestamps=True,
-            ).get_result()
-        text = [result["alternatives"][0]["timestamps"]
-                for result in res["results"]]
-        data_list = list()
-        for t in text:
-            data_list += t
-
-        f = open("datawW.json", "w+")
-        json.dump(data_list, f, ensure_ascii=False, indent=2)
-        media.text.save("data", File(f))
         serializer = MediaSerializer(media, context={"request": request})
 
         return Response(serializer.data, status=status.HTTP_200_OK)
