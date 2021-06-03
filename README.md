@@ -7,8 +7,8 @@ In order to run the application in local environment follow instructions below:
 
 1. Copy the public repo's URL Media Manager - Speech-To-Text generated Media Manager
 2. Create virtual environment for the Python application and activate it
-1. On Linux/Mac: python3 -m venv env and source env/bin/activate
-2. On Windows: py -m venv env and .\env\Scripts\activate
+  1. On Linux/Mac: python3 -m venv env and source env/bin/activate
+  2. On Windows: py -m venv env and .\env\Scripts\activate
 3. Clone the repository inside the virtual environment using git clone <https-URL> command.
 4. Install pip (Python package manager) and npm (Node.JS) if you haven’t already
 5. Navigate to the cloned repository and install all dependencies for the backend application using the pip install -r requirements.txt command.
