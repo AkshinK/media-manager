@@ -14,7 +14,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 from django.conf import settings
-import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -146,7 +145,7 @@ MEDIA_URL = "/media/"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-# django_heroku.settings(locals())
+
 # IBM WATSON CREDENTIALS
 API_KEY = "hO1w63NZicP_DJV4Ouo0BCeinYjkiSxrZ9YLF1_C19YW"
 URL = "https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/34334327-0797-471c-bd85-81a124edf2de"
