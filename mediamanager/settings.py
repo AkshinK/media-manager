@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     "accounts",
     "knox",
     "corsheaders",
-    "coverage",
 ]
 
 REST_FRAMEWORK = {"DEFAULT_AUTHENTICATION_CLASSES": (
